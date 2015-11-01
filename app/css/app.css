@@ -1,0 +1,43 @@
+.profile-list {
+    background-color: #333;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.profile-section {
+    padding-bottom: 20px;
+}
+
+.profile-pic {
+    float: left;
+    border-style: solid;
+    border-color: #AAA;
+    border-width: 1px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-title {
+    float: left;
+    display: inline-block;
+}
+
+.profile-des {}
+
+.profile-wrapper {
+    padding: 20px 20px 0 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+nav {
+    background-color: #333;
+}

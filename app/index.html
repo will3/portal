@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/app.css"></link>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/profile.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="ProfileCtrl">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Portal</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="profile-list"></div>
+            <div class="profile-wrapper">
+                <div class="profile-section clearfix">
+                    <div class="profile-pic"></div>
+                    <div class="profile-title">
+                        <h1>{{profile.name}}</h1>
+                        <div>{{profile.title}}</div>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <div class="profile-des">{{profile.description}}</div>
+                    <hr></hr>
+                    <div ng-repeat="item in profile.info">
+                        {{item.key}} : {{item.value}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
